@@ -28,7 +28,7 @@ export default function MenuPage() {
       {/* Header */}
       <header className="bg-primary-500 text-white py-6 px-4 shadow-lg">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-3xl font-bold text-center">🍜 Nhà Hàng Việt Nam</h1>
+          <h1 className="text-3xl font-bold text-center">🔥 Nhà Hàng Việt Nam</h1>
           <p className="text-center text-primary-100 mt-2">Ẩm Thực Việt Truyền Thống</p>
         </div>
       </header>

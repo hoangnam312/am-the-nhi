@@ -3,7 +3,7 @@ export interface MenuItem {
   id: string;
   name: string;
   price: number;
-  category: 'main' | 'drink';
+  category: 'main' | 'drink' | 'snack';
   image: string;
   description?: string;
 }

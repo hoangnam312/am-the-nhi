@@ -2,50 +2,84 @@ import { MenuItem } from '@/types';
 
 // Hardcoded menu items for the restaurant
 export const MENU_ITEMS: MenuItem[] = [
+  // Drinks
   {
-    id: 'pho-bo',
-    name: 'Phở Bò',
-    price: 45000,
-    category: 'main',
-    image: '🍜',
-    description: 'Phở bò truyền thống với rau thơm tươi'
-  },
-  {
-    id: 'bun-cha',
-    name: 'Bún Chả',
-    price: 40000,
-    category: 'main',
-    image: '🍲',
-    description: 'Thịt nướng với bún và nước mắm chua ngọt'
-  },
-  {
-    id: 'com-suon',
-    name: 'Cơm Sườn',
-    price: 42000,
-    category: 'main',
-    image: '🍱',
-    description: 'Sườn nướng với cơm trắng và dưa chua'
-  },
-  {
-    id: 'iced-tea',
-    name: 'Trà Đá',
-    price: 10000,
+    id: 'cacao',
+    name: 'Cacao',
+    price: 25000,
     category: 'drink',
-    image: '🧊',
-    description: 'Trà đá truyền thống Việt Nam'
+    image: '🍫',
+    description: 'Cacao nóng/đá thơm ngon'
   },
   {
-    id: 'coffee',
-    name: 'Cà Phê Sữa Đá',
+    id: 'quat-em-di',
+    name: 'Quất Em Đi',
     price: 15000,
     category: 'drink',
-    image: '☕',
-    description: 'Cà phê phin với sữa đặc'
+    image: '🍋',
+    description: 'Nước quất tươi mát'
+  },
+  {
+    id: 'phong-xa',
+    name: 'Phóng Xạ',
+    price: 20000,
+    category: 'drink',
+    image: '☢️',
+    description: 'Thức uống phóng xạ đặc biệt'
+  },
+  {
+    id: 'bi-dao',
+    name: 'Bí Đao',
+    price: 15000,
+    category: 'drink',
+    image: '🥒',
+    description: 'Nước bí đao thanh mát'
+  },
+  {
+    id: 'hong-tra-sua',
+    name: 'Hồng Trà Sữa',
+    price: 20000,
+    category: 'drink',
+    image: '🥛',
+    description: 'Hồng trà sữa thơm béo'
+  },
+  {
+    id: 'khoai-mon-bong-benh',
+    name: 'Khoai Môn Bồng Bềnh',
+    price: 20000,
+    category: 'drink',
+    image: '🍠',
+    description: 'Thức uống khoai môn béo ngậy'
+  },
+  // Skewers
+  {
+    id: 'xien-thit',
+    name: 'Xiên Thịt',
+    price: 5000,
+    category: 'snack',
+    image: '🍢',
+    description: 'Xiên thịt'
+  },
+  {
+    id: 'xien-xuc-xich',
+    name: 'XXX',
+    price: 10000,
+    category: 'snack',
+    image: '🌭',
+    description: 'Xiên xúc xích'
+  },
+  {
+    id: 'xien-cha-muc',
+    name: 'Xiên Chả Mực',
+    price: 5000,
+    category: 'snack',
+    image: '🦑',
+    description: 'Xiên chả mực'
   }
 ];
 
 // Category labels
-export const CATEGORIES = ['Tất Cả', 'Món Chính', 'Đồ Uống'] as const;
+export const CATEGORIES = ['Tất Cả', 'Đồ Uống', 'Đồ Nướng'] as const;
 
 /**
  * Filter menu items by category
@@ -57,9 +91,9 @@ export function getMenuItemsByCategory(category: string): MenuItem[] {
     return MENU_ITEMS;
   }
 
-  const categoryMap: { [key: string]: 'main' | 'drink' } = {
-    'Món Chính': 'main',
-    'Đồ Uống': 'drink'
+  const categoryMap: { [key: string]: 'drink' | 'snack' } = {
+    'Đồ Uống': 'drink',
+    'Đồ Nướng': 'snack'
   };
 
   const categoryKey = categoryMap[category];
